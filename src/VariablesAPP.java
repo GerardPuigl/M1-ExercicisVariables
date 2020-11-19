@@ -14,7 +14,7 @@ public class VariablesAPP {
 		int ntraspas;
 		ntraspas=(any-REFTRASPAS)/4;
 		
-		//Bucle de años de traspaso y calculo si es un ano de traspaso
+		//Bucle de años de traspaso y calculo si es un año de traspaso
 		
 		int anytraspas=REFTRASPAS;
 		for (int i = 0; i < ntraspas; i++) {
