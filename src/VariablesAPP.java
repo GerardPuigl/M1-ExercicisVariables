@@ -16,5 +16,19 @@ public class VariablesAPP {
 		ntraspas = (any - REFTRASPAS) / 4;
 		
 		System.out.println("Anys de traspas entre el teu aniversari i el 1948: "+ntraspas);
+		
+		//Mostrar anys de traspàs
+		int anytraspas=REFTRASPAS;
+		for (int i = 0; i < ntraspas; i++) {
+			anytraspas=anytraspas+4;				
+			System.out.println(anytraspas);
+		}
+		boolean bool=(any==anytraspas);
+		if (bool){
+			System.out.println("El meu any de naixement és de traspàs.");
+		}else{
+			System.out.println("El meu any de naixement no és de traspàs.");	
+		}
+
 	}
 }
