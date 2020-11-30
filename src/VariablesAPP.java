@@ -5,34 +5,10 @@ public class VariablesAPP {
 		
 		//Declaración y inicialización de nombre,apellidos y fecha de nacimiento
 		
-		String nom="Pep",cognom1="Botella",cognom2="Mares";
-		int dia=18,mes=01,any=1984;
+		String nom="Gerard",cognom1="Puig",cognom2="Latorre";
+		int dia=01,mes=01,any=1990;
 		
-		//Cáculo de numeros años de traspaso respecto al 1948 como año de referencia.
-		
-		final int REFTRASPAS=1948;
-		int ntraspas;
-		ntraspas=(any-REFTRASPAS)/4;
-		
-		//Bucle de años de traspaso y calculo si es un año de traspaso
-		
-		int anytraspas=REFTRASPAS;
-		for (int i = 0; i < ntraspas; i++) {
-			anytraspas=anytraspas+4;				
-		}
-		boolean bool=(any==anytraspas);
-
-		//Unir la información en variables e imprimir
-		
-		String nomcomplet= nom+" "+cognom1+" "+cognom2;
-		String dataneixement = dia+"/"+mes+"/"+any;
-		System.out.println(nomcomplet);
-		System.out.println(dataneixement);		
-		if (bool){
-			System.out.println("El meu any de naixement és de traspàs.");
-		}else{
-			System.out.println("El meu any de naixement no és de traspàs.");
-			
-		}
+		System.out.println(nom+" "+cognom1+" "+cognom2);
+		System.out.println(dia+"/"+mes+"/"+any);
 	}
 }
