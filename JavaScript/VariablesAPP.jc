@@ -1,8 +1,9 @@
-//Declaraci�n y inicializaci�n de nombre,apellidos y fecha de nacimiento
+//Declaración y inicialización de nombre,apellidos y fecha de nacimiento
 		
 var nom="Gerard",cognom1="Puig",cognom2="Latorre";
 var dia=01,mes=01,any=1990;
 
-document.writeln(nom,"\n",cognom1," ",cognom2,"\n");
-document.write("\n");
-document.writeln(dia,"/"+mes,"/",any);
+document.writeln("<p>");
+document.writeln(nom," ",cognom1," ",cognom2,"<br/>");
+document.writeln(dia,"/"+mes,"/",any,"</br>");
+document.writeln("</p>");
