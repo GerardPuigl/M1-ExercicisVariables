@@ -1,0 +1,37 @@
+//Declaración y inicialización de nombre,apellidos y fecha de nacimiento
+
+var nom = "Gerard", cognom1 = "Puig", cognom2 = "Latorre";
+var dia = 01, mes = 01, any = 1990;
+
+document.writeln("<p>");
+document.writeln(nom, " ", cognom1, " ", cognom2, "<br/>");
+document.writeln(dia, "/" + mes, "/", any, "</br>");
+document.writeln("</p>");
+
+// Cáculo de numeros años de traspaso respecto al 1948 como año de referencia.
+var REFTRASPAS = 1948;
+var ntraspas;
+ntraspas = Math.floor((any - REFTRASPAS) / 4);
+
+document.writeln("<p>");
+document.writeln("Anys de traspas entre el teu aniversari i el 1948: ", ntraspas, "<br/>");
+document.writeln("</p>");
+
+
+//Mostrar años de traspaso
+
+var anytraspas = REFTRASPAS;
+
+document.writeln("<p>");
+for (var i = 0; i < ntraspas; i++) {
+    anytraspas = anytraspas + 4;
+    document.writeln(anytraspas, "<br/>");
+}
+
+var bool = (any == anytraspas);
+if (bool) {
+    document.writeln("El meu any de naixement és de traspàs.<br/>");
+} else {
+    document.writeln("El meu any de naixement no és de traspàs.<br/>");
+}
+document.writeln("</p>");
