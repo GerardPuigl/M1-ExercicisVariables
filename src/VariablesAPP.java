@@ -1,20 +1,21 @@
+import java.util.Arrays;
 
 public class VariablesAPP {
 
 	public static void main(String[] args) {
 
-		// DeclaraciÛn y inicializaciÛn de nombre,apellidos y fecha de nacimiento
+		// Declaraci√≥ i inicialitzaci√≥ de nom, cognom i data de naixement.
 		String nom = "Gerard", cognom1 = "Puig", cognom2 = "Latorre";
-		int dia = 01, mes = 01, any = 1990;
+		int dia = 01, mes = 01, any = 1984;
 
-		// C·culo de numeros aÒos de traspaso respecto al 1948 como aÒo de referencia.
+		// C√†cul de n√∫meros d'anys de trasp√†s respecte 1948 com any de refer√®ncia.
 		final int REFTRASPAS = 1948;
 		int ntraspas;
 		ntraspas = (any - REFTRASPAS) / 4;
 		
 		// System.out.println("Anys de traspas entre el teu aniversari i el 1948: "+ntraspas);
 		
-		//Mostrar anys de trasp‡s
+		//Mostrar anys de trasp√†s
 		int anytraspas=REFTRASPAS;
 		for (int i = 0; i < ntraspas; i++) {
 			anytraspas=anytraspas+4;				
@@ -22,17 +23,52 @@ public class VariablesAPP {
 		}
 		boolean bool=(any==anytraspas);
 
-		//Unir la informaciÛn en variables e imprimir
+		//Unir la informaci√≥ en variables e imprimir
 		
 		String nomcomplet= nom+" "+cognom1+" "+cognom2;
 		String dataneixement = dia+"/"+mes+"/"+any;
 		System.out.println(nomcomplet);
 		System.out.println(dataneixement);		
 		if (bool){
-			System.out.println("El meu any de naixement Ès de trasp‡s.");
+			System.out.println("El meu any de naixement √©s de trasp√†s.");
 		}else{
-			System.out.println("El meu any de naixement no Ès de trasp‡s.");
+			System.out.println("El meu any de naixement no √©s de trasp√†s.");
 			
+		}
+		
+		//Nivell 2, declarar una variable double i fer cast a les altres 
+		double varDouble= 0.1342;
+		int varInt;
+		float varFloat;
+		String varString;
+		
+		varInt = (int)varDouble;
+		varFloat = (float)varDouble;
+		varString = String.valueOf(varDouble);
+		
+		System.out.println("\nCast int: " +  varInt);
+		System.out.println("Cast float: " +  varFloat);
+		System.out.println("Cast String: " +  varString);
+		
+		//Nivell 3, rota l‚Äôarray sense utilitzar un array auxiliar ni llibreries. Pots utilizar una variable auxiliar.
+		
+		int[] arrayInt = {1,2,3,4,5,6,7,8,9,10};
+			
+		int auxInt;
+		
+		for (int i = 0;i<=(arrayInt.length-1)/2;i++) {
+			
+			auxInt = arrayInt[i];
+			
+			arrayInt[i] = arrayInt[arrayInt.length-1-i];
+			
+			arrayInt[arrayInt.length-1-i] = auxInt;
+		}
+		
+		System.out.println("\nArray Invertida: ");
+		
+		for (int i:arrayInt) {
+			System.out.print(i+",");
 		}
 
 	}
